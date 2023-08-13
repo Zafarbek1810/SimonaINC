@@ -1039,11 +1039,17 @@ button:focus {
 }
 
 .service-item .service-bottom {
-  padding: 25px 25px 22px;
+  padding: 10px 25px 10px;
   border-left: 1px solid #ebebeb;
   border-right: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
   position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  
+
+
 }
 
 .service-item .service-bottom h3 {
