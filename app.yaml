@@ -1,6 +1,7 @@
 runtime: nodejs20
 instance_class: F1
 
+
 automatic_scaling:
   target_cpu_utilization: 0.65
   min_instances: 1
@@ -10,8 +11,29 @@ env_variables:
   MAIL_PASSWORD: "yuloboxkdlzsifnz"
 
 handlers:
+
 - url: /app/.*
   script: auto
 
-- url: /.*
-  static_dir: static/
+
+- url: /
+  static_files: static/index.html
+  upload: static/index.html
+
+- url: /(.*)
+  static_files: static/\1
+  upload: static/(.*)
+
+
+# # Serve index.html by default
+# - url: /
+#   # static_files: 
+#   static_dir: static
+#   # upload: static/index.html
+
+# # Serve other static files
+# - url: /.*
+#   static_dir: static/
+
+  
+  

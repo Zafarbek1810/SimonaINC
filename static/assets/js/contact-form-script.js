@@ -3,11 +3,14 @@
 /*==============================================================*/
 (function ($) {
     "use strict"; // Start of use strict
+    
     $("#contactForm").validator().on("submit", function (event) {
         if (event.isDefaultPrevented()) {
             // handle the invalid form...
+            console.log("error 1");
             formError();
             submitMSG(false, "Did you fill in the form properly?");
+            
         } else {
             // everything looks good!
             event.preventDefault();
@@ -20,24 +23,59 @@
         // Initiate Variables With Form Content
         var name = $("#name").val();
         var email = $("#email").val();
-        var msg_subject = $("#msg_subject").val();
-        var phone_number = $("#phone_number").val();
-        var message = $("#message").val();
+        var msg_subject = $("#subject").val();
+        var phone_number = $("#phone").val();
+        var message = $("#description").val();
 
+        // console.log(name + " what is this???");
+        if (!name || !email || !msg_subject || !phone_number || !message) {
+            console.log("error 2");
+            formError();
+                submitMSG(false, "Please fill all fields");
+                return;
+        }
 
-        $.ajax({
-            type: "POST",
-            url: "assets/php/form-process.php",
-            data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&phone_number=" + phone_number + "&message=" + message,
-            success : function(text){
-                if (text == "success"){
-                    formSuccess();
-                } else {
-                    formError();
-                    submitMSG(false,text);
-                }
+        const url = "https://simonainc.com/app/send-mail"; // replace with your endpoint URL
+
+        const data = {
+            name: name,
+            email: email,
+            subject: msg_subject,
+            description: message,
+            phone: phone_number
+          };
+
+        const params = new URLSearchParams(data).toString();
+
+        return fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: params
+        }).then((response)=>{
+            if(response.ok){
+                formSuccess();
+            }else{
+                formError();
+                submitMSG(false, "Something bad happened, please check everything and try again");
             }
+        }).catch((err) => {
+                    formError();
+                    submitMSG(false,err.message);
         });
+        
+        // $.ajax({
+        //     type: "POST",
+        //     url: "app/send-mail",
+        //     data: "name=" + name + "&email=" + email + "&subject=" + msg_subject + "&phone=" + phone_number + "&description=" + message,
+        //     success : function(text){
+        //         if (text == "success"){
+        //             formSuccess();
+        //         } else {
+        //             formError();
+        //             submitMSG(false,text);
+        //         }
+        //     }
+        // });
     }
 
     function formSuccess(){

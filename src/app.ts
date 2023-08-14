@@ -4,16 +4,19 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 
 const app = express();
-const PORT: number = 3000;
 app.set('trust proxy', true);
 require('dotenv').config();
+const PORT: number = +process.env.PORT;
 
 // Middlewares
 app.use(cors()); // To handle CORS
 app.use(bodyParser.urlencoded({ extended: true })); // To parse form data
 
+app.get('/', async (req: Request, res: Response) => {
+    return res.status(200).json({ message: 'Whatsup there ?!' });
+});
 
-app.post('/send-mail', async (req: Request, res: Response) => {
+app.post('/app/send-mail', async (req: Request, res: Response) => {
   const { name, email, phone, subject, description } = req.body;
 
   // Check for required fields
@@ -44,15 +47,20 @@ app.post('/send-mail', async (req: Request, res: Response) => {
       to: 'shjavokhirus@gmail.com',
       subject: `💵 New quote from simonainc.com`,
       text: `
+          -------- 📧 Message 📧 -------- 
+
           Name: ${name}
           Email: ${email}
           Phone: ${phone}
+          Subject: ${subject}
           Description: ${description}
           
-          -------- 🪪 Sender info 🪪 -------- 
+          -------- 🪪 Info 🪪 -------- 
 
           Agent: ${userAgent}
           Ip-Address: ${req.ip}
+
+          *Use ip address to get more info about user, for example to know his location
       `,
   };
 
