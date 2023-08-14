@@ -23,15 +23,17 @@
         // Initiate Variables With Form Content
         var name = $("#name").val();
         var email = $("#email").val();
+
         var msg_subject = $("#subject").val();
         var phone_number = $("#phone").val();
         var message = $("#description").val();
 
+      
         // console.log(name + " what is this???");
         if (!name || !email || !msg_subject || !phone_number || !message) {
             console.log("error 2");
             formError();
-                submitMSG(false, "Please fill all fields");
+            submitMSG(false, "Please fill all fields");
                 return;
         }
 
