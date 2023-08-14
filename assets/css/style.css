@@ -1030,7 +1030,7 @@ button:focus {
 
 .service-item .service-top a img {
   width: 100%;
-  width: 430px;
+  /* width: 430px; */
   height: 500px;
   object-fit: cover;
 
@@ -2042,6 +2042,7 @@ button:focus {
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  padding: 0 20px;
 }
 
 /*----- End Logo CSS -----*/
