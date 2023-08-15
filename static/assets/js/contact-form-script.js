@@ -9,6 +9,7 @@
             // handle the invalid form...
             console.log("error 1");
             formError();
+            myFunctionRequired()
             submitMSG(false, "Did you fill in the form properly?");
             
         } else {
@@ -32,8 +33,9 @@
         // console.log(name + " what is this???");
         if (!name || !email || !msg_subject || !phone_number || !message) {
             console.log("error 2");
+            myFunctionRequired()
             formError();
-            submitMSG(false, "Please fill all fields");
+            // submitMSG(false, "Please fill all fields");
                 return;
         }
 
@@ -84,6 +86,13 @@
 
     function myFunctionSuccess() {
         var x = document.getElementById("snackbar");
+      
+        x.className = "show";
+      
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      }
+    function myFunctionRequired() {
+        var x = document.getElementById("snackbarreq");
       
         x.className = "show";
       

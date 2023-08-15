@@ -52,6 +52,26 @@
           -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
           animation: fadein 0.5s, fadeout 0.5s 2.5s;
         }
+        #snackbarreq {
+          visibility: hidden; 
+          min-width: 250px; 
+          margin-left: -125px; 
+          background-color: red; 
+          color: #fff; 
+          text-align: center; 
+          border-radius: 2px; 
+          padding: 16px; 
+          position: fixed; 
+          z-index: 10000; 
+          left: 50%; 
+          top: 30px; 
+        }
+
+        #snackbarreq.show {
+          visibility: visible; 
+          -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+          animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
         #snackbarerr {
           visibility: hidden; 
           min-width: 250px; 
@@ -557,25 +577,25 @@
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Your name</label>
-                      <input id="name" name="name" type="text" class="form-control" />
+                      <input id="name" name="name" type="text" class="form-control" required/>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Your email</label>
-                      <input id="email" type="email" class="form-control" />
+                      <input id="email" type="email" class="form-control" required/>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Phone</label>
-                      <input id="phone" type="text" class="form-control" />
+                      <input id="phone" type="text" class="form-control" required/>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label>Subject</label>
-                      <input id="subject" type="text" class="form-control" />
+                      <input id="subject" type="text" class="form-control" required/>
                     </div>
                   </div>
                   <div class="col-lg-12">
@@ -592,8 +612,9 @@
                   </div>
                 </div>
                 <div id="snackbar">Message Submitted!</div>
+                <div id="snackbarreq">Please fill all fields</div>
                 <div id="snackbarerr">Something bad happened, please check everything and try again</div>
-                <button type="submit" class="btn cmn-btn" onclick="myFunction()">
+                <button type="submit" class="btn cmn-btn">
                   Request A Quote
                 </button>
               </form>
