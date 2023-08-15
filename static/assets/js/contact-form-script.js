@@ -56,8 +56,10 @@
         }).then((response)=>{
             if(response.ok){
                 formSuccess();
+                myFunctionSuccess();
             }else{
                 formError();
+                myFunctionError()
                 submitMSG(false, "Something bad happened, please check everything and try again");
             }
         }).catch((err) => {
@@ -79,6 +81,21 @@
         //     }
         // });
     }
+
+    function myFunctionSuccess() {
+        var x = document.getElementById("snackbar");
+      
+        x.className = "show";
+      
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      }
+    function myFunctionError() {
+        var x = document.getElementById("snackbarerr");
+      
+        x.className = "show";
+      
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      }
 
     function formSuccess(){
         $("#contactForm")[0].reset();

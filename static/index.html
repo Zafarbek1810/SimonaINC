@@ -31,6 +31,68 @@
     <title>SIMONA - Transport and Logistics</title>
 
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <style>
+        #snackbar {
+          visibility: hidden; 
+          min-width: 250px; 
+          margin-left: -125px; 
+          background-color: #00997B; 
+          color: #fff; 
+          text-align: center; 
+          border-radius: 2px; 
+          padding: 16px; 
+          position: fixed; 
+          z-index: 10000; 
+          left: 50%; 
+          top: 30px; 
+        }
+
+        #snackbar.show {
+          visibility: visible; 
+          -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+          animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        #snackbarerr {
+          visibility: hidden; 
+          min-width: 250px; 
+          margin-left: -125px; 
+          background-color: #00997B; 
+          color: #fff; 
+          text-align: center; 
+          border-radius: 2px; 
+          padding: 16px; 
+          position: fixed; 
+          z-index: 10000; 
+          left: 50%; 
+          top: 30px; 
+        }
+
+        #snackbarerr.show {
+          visibility: visible; 
+          -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+          animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+          from {top: 0; opacity: 0;}
+          to {top: 30px; opacity: 1;}
+        }
+
+        @keyframes fadein {
+          from {top: 0; opacity: 0;}
+          to {top: 30px; opacity: 1;}
+        }
+
+        @-webkit-keyframes fadeout {
+          from {top: 30px; opacity: 1;}
+          to {top: 0; opacity: 0;}
+        }
+
+        @keyframes fadeout {
+          from {top: 30px; opacity: 1;}
+          to {top: 0; opacity: 0;}
+        }
+    </style>
   </head>
   <body>  
     <!-- Preloader -->
@@ -529,7 +591,9 @@
                     </div>
                   </div>
                 </div>
-                <button type="submit" class="btn cmn-btn">
+                <div id="snackbar">Message Submitted!</div>
+                <div id="snackbarerr">Something bad happened, please check everything and try again</div>
+                <button type="submit" class="btn cmn-btn" onclick="myFunction()">
                   Request A Quote
                 </button>
               </form>
