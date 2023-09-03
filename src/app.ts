@@ -44,7 +44,7 @@ app.post('/app/send-mail', async (req: Request, res: Response) => {
   // Email options
   const mailOptions = {
       from: email,
-      to: 'shjavokhirus@gmail.com',
+      to: 'info@simonainc.com',
       subject: `💵 New quote from simonainc.com`,
       text: `
           -------- 📧 Message 📧 -------- 
