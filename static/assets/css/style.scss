@@ -55,7 +55,7 @@ This files table contents are outlined below>>>>>
     --white-color: #ffffff;
     --grey-color: #555555;
     --black-color: #1a1a1a;
-    --green-color: #00997b;
+    --green-color: #6a994e;
 }
 
 /*----- Default CSS -----*/
@@ -164,7 +164,7 @@ button {
                     background: var(--black-color);
 
                     li {
-                        border-bottom: 1px dashed #00997b4f;
+                        border-bottom: 1px dashed #6a994e4f;
 
                         &:last-child {
                             border-bottom: 0;

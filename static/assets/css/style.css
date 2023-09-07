@@ -53,7 +53,7 @@ This files table contents are outlined below>>>>>
   --white-color: #ffffff;
   --grey-color: #555555;
   --black-color: #1a1a1a;
-  --green-color: #00997b;
+  --green-color: #6a994e;
 }
 
 /*----- Default CSS -----*/
@@ -185,7 +185,7 @@ button:focus {
 }
 
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li {
-  border-bottom: 1px dashed #00997b4f;
+  border-bottom: 1px dashed #6a994e4f;
 }
 
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li:last-child {
@@ -810,8 +810,8 @@ button:focus {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 1290px;
-  height: auto;
+  width: 750px;
+  height: unset;
 }
 
 .banner-item.two h1 {
