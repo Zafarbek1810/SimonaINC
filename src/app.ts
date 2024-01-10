@@ -25,6 +25,8 @@ app.post('/app/send-mail', async (req: Request, res: Response) => {
   }
 
   // Create a nodemailer transporter using SMTP
+  console.log(process.env.MAIL_USERNAME + " " + process.env.MAIL_PASSWORD);
+  
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     host: 'smtp.gmail.com',

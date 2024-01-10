@@ -40,6 +40,7 @@
         }
 
         const url = "https://simonainc.com/app/send-mail"; // replace with your endpoint URL
+        // const url = "http://localhost:3000/app/send-mail"; // replace with your endpoint URL
 
         const data = {
             name: name,
