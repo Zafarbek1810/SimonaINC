@@ -1,0 +1,17 @@
+Examy culture (Operating principle)
+
+1. Chatga yozilgan har bitta savol e'tiborsiz qolmasligi va 24 soat ichida javob yozilishi.
+2. Yangi g'oya yoki plan berilsa qo'llab-quvvatlaydigan faktlar keltirilishi, agar g'oya yoki planni foydasi bo'lmasa sababini tushuntiradigan faklar keltirilishi. (Shunchaki bu ishlamaydi yoki ishlamaydi deb fikr bildirmaslik)
+3. Agar fikrlar teskari bo'lib qolsa va ikkala tomon ham o'zini fikrini maqul ko'rsa, g'oyani ma'lum muddat sinab ko'rish, va shu muddat ichida userlardan feedback olish.
+4. Ish remote bo'lganligi sababli har bitta qilinayotgan task kanbanga (trello) yozib borilishi
+5. Keyin qilishga kelishilgan plan va g'oyalarni esdan chiqmasligi uchun kanbanga yozish
+6. Agar taskni tugatish uchun 30 minutdan kam vaqt olsa bu taskni keyinga surmaslik.
+7. Userlarga e'tibor. Har bitta userni fikrini e'tibordan chetda qoldirmaslik.
+8. Emotsiyalarsiz professional muloqot qilish.
+9. Time managementni to'g'irlab olish, ishlash bilan busy bo'lishni farqi bor. 
+10. Pul bilan bog'liq hamma transactionlar google sheets ga yozilishi agar bularni track qiladigan shared platforma bo'lmasa (payme, stripe dagi revenuelar shartmas, ularni online korsa boladi).
+
+Suggestions:
+
+1. Har kuni nimadir yangi narsa o'rganish (Bizni holatda successfull startuplarni historysi, sababi ularda normal startupda bo'lishi mumkin muammolardan o'tishgan va track recordi bor.). Foydali manbalar: ycombinator (youtube), y vault (youtube), https://news.ycombinator.com/, Founder (podcast), How I built this (podcast), Little bit better (youtube)
+2. O'qish uchun kitob: "Zero to One"

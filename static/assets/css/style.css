@@ -53,7 +53,7 @@ This files table contents are outlined below>>>>>
   --white-color: #ffffff;
   --grey-color: #555555;
   --black-color: #1a1a1a;
-  --green-color: #6a994e;
+  --green-color: #3C59A9;
 }
 
 /*----- Default CSS -----*/
@@ -185,7 +185,7 @@ button:focus {
 }
 
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li {
-  border-bottom: 1px dashed #6a994e4f;
+  border-bottom: 1px dashed #3C59A9;
 }
 
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li:last-child {
